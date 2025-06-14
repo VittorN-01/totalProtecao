@@ -120,53 +120,53 @@
     <div class="service_container">
       <div class="container">
         <nav class="container">
-  <div class="row justify-content-center text-center g-4">
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-      <a
-        href="javascript:void(0)"
-        onclick="showContentProdutos('uniformes')"
-        data-click-track="Uniformes - Produtos"
-        class="d-block bg-primary p-2 rounded-3 text-decoration-none"
-        onmouseover="this.style.backgroundColor='#002C5F'; this.children[0].src='./images/uniforme-hover.png';"
-        onmouseout="this.style.backgroundColor='#013986'; this.children[0].src='./images/uniforme.png';"
-        style="background-color: #013986; transition: background-color 1s ease;"
-      >
-        <img src="./images/uniforme.png" alt="Uniformes" class="img-fluid rounded-2" style="transition: 1s;">
-      </a>
-      <p class="text-white fw-bold mt-2">Uniformes</p>
-    </div>
+          <div class="row justify-content-center text-center g-4">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <a
+                href="javascript:void(0)"
+                onclick="ativarLink(this, './images/uniforme.png', './images/uniforme-hover.png'); showContentProdutos('uniformes')"
+                data-click-track="Uniformes - Produtos"
+                class="d-block p-2 rounded-3 text-decoration-none"
+                onmouseover="if(!this.classList.contains('ativo')) { this.style.backgroundColor='#002C5F'; this.children[0].src='./images/uniforme-hover.png'; }"
+                onmouseout="if(!this.classList.contains('ativo')) { this.style.backgroundColor='transparent'; this.children[0].src='./images/uniforme.png'; }"
+                style="background-color: transparent; transition: background-color 1s ease;"
+              >
+                <img src="./images/uniforme.png" alt="Uniformes" class="img-fluid rounded-2" style="transition: 1s;">
+              </a>
+              <p class="text-white fw-bold mt-2">Uniformes</p>
+            </div>
 
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-      <a
-        href="javascript:void(0)"
-        onclick="showContentProdutos('seguranca')"
-        data-click-track="Segurança - Produtos"
-        class="d-block bg-primary p-2 rounded-3 text-decoration-none"
-        onmouseover="this.style.backgroundColor='#002C5F'; this.children[0].src='./images/capacete-hover.png';"
-        onmouseout="this.style.backgroundColor='#013986'; this.children[0].src='./images/capacete.png';"
-        style="background-color: #013986; transition: background-color 1s ease;"
-      >
-        <img src="./images/capacete.png" alt="Segurança" class="img-fluid rounded-2" style="transition: 1s;">
-      </a>
-      <p class="text-white fw-bold mt-2">Segurança</p>
-    </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <a
+                href="javascript:void(0)"
+                onclick="ativarLink(this, './images/capacete.png', './images/capacete-hover.png'); showContentProdutos('seguranca')"
+                data-click-track="Segurança - Produtos"
+                class="d-block p-2 rounded-3 text-decoration-none"
+                onmouseover="if(!this.classList.contains('ativo')) { this.style.backgroundColor='#002C5F'; this.children[0].src='./images/capacete-hover.png'; }"
+                onmouseout="if(!this.classList.contains('ativo')) { this.style.backgroundColor='transparent'; this.children[0].src='./images/capacete.png'; }"
+                style="background-color: transparent; transition: background-color 1s ease;"
+              >
+                <img src="./images/capacete.png" alt="Segurança" class="img-fluid rounded-2" style="transition: 1s;">
+              </a>
+              <p class="text-white fw-bold mt-2">Segurança</p>
+            </div>
 
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-      <a
-        href="javascript:void(0)"
-        onclick="showContentProdutos('ferramentas')"
-        data-click-track="Ferramentas - Produtos"
-        class="d-block bg-primary p-2 rounded-3 text-decoration-none"
-        onmouseover="this.style.backgroundColor='#002C5F'; this.children[0].src='./images/manutencao-hover.png';"
-        onmouseout="this.style.backgroundColor='#013986'; this.children[0].src='./images/manutencao.png';"
-        style="background-color: #013986; transition: background-color 1s ease;"
-      >
-        <img src="./images/manutencao.png" alt="Ferramentas" class="img-fluid rounded-2" style="transition: 1s;">
-      </a>
-      <p class="text-white fw-bold mt-2">Ferramentas</p>
-    </div>
-  </div>
-</nav>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <a
+                href="javascript:void(0)"
+                onclick="ativarLink(this, './images/manutencao.png', './images/manutencao-hover.png'); showContentProdutos('ferramentas')"
+                data-click-track="Ferramentas - Produtos"
+                class="d-block p-2 rounded-3 text-decoration-none"
+                onmouseover="if(!this.classList.contains('ativo')) { this.style.backgroundColor='#002C5F'; this.children[0].src='./images/manutencao-hover.png'; }"
+                onmouseout="if(!this.classList.contains('ativo')) { this.style.backgroundColor='transparent'; this.children[0].src='./images/manutencao.png'; }"
+                style="background-color: transparent; transition: background-color 1s ease;"
+              >
+                <img src="./images/manutencao.png" alt="Ferramentas" class="img-fluid rounded-2" style="transition: 1s;">
+              </a>
+              <p class="text-white fw-bold mt-2">Ferramentas</p>
+            </div>
+          </div>
+        </nav>
 
 
         <!-- UNIFORMES -->

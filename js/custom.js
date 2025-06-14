@@ -119,4 +119,21 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
+function ativarLink(element, imgNormal, imgHover) {
+    // Desativa todos
+    document.querySelectorAll('a.d-block').forEach(function(el) {
+      el.classList.remove('ativo');
+      el.style.backgroundColor = 'transparent';
+      if (el.children[0]) {
+        // Corrige a imagem de cada um
+        if (el.onclick && el.onclick.toString().includes('uniformes')) el.children[0].src = './images/uniforme.png';
+        if (el.onclick && el.onclick.toString().includes('seguranca')) el.children[0].src = './images/capacete.png';
+        if (el.onclick && el.onclick.toString().includes('ferramentas')) el.children[0].src = './images/manutencao.png';
+      }
+    });
 
+    // Ativa o clicado
+    element.classList.add('ativo');
+    element.style.backgroundColor = '#002C5F';
+    if (element.children[0]) element.children[0].src = imgHover;
+  }

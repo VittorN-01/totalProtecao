@@ -4,18 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const codigo = urlParams.get("codigo");
 
-  // Corrigido: compara como string
   const produto = produtos.find(p => String(p.codigo) === codigo);
 
   if (produto !== null) {
-    console.error("Produto com código", codigo)
+    console.error("Produto com código", codigo);
   } else {
     console.error("Produto com código", codigo, "não encontrado.");
     document.getElementById("titulo-produto").innerText = "Produto não encontrado";
     return;
   }
 
-  // Preenche dados
+  // Preenche os dados do produto
   document.getElementById("imagem-produto").src = produto.img;
   document.getElementById("titulo-produto").innerText = produto.nome;
   document.getElementById("detalhes-produto").innerText = produto.detalhes;
@@ -40,6 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
         <label for="${campo.id}">${campo.label}:</label>
         <input type="text" id="${campo.id}" name="${campo.id}">
       `;
+    }
+  });
+
+  // >>> BLOQUEAR ENVIO SE PRODUTO NÃO ESTIVER CARREGADO <<<
+  const formulario = document.getElementById("formulario");
+  formulario.addEventListener("submit", function (e) {
+    const tituloProduto = document.getElementById("titulo-produto").innerText.trim();
+    const codigoProduto = document.getElementById("codigo-produto").innerText.trim();
+
+    if (tituloProduto === "" || tituloProduto === "Produto" || tituloProduto === "Produto não encontrado" || codigoProduto === "") {
+      e.preventDefault();
+      alert("Por favor, selecione um produto antes de solicitar o orçamento.");
     }
   });
 });
